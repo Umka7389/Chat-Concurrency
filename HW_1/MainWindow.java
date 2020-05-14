@@ -1,16 +1,19 @@
-package ru.gb.jtwo.alesson.online;
+package Java2.HW_1;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
-public class MainWindow extends JFrame {
+public class MainWindow extends JFrame{
 
     private static final int POS_X = 400;
     private static final int POS_Y = 200;
     private static final int WINDOW_WIDTH = 800;
     private static final int WINDOW_HEIGHT = 600;
 
-    Sprite[] sprites = new Sprite[100];
+    Sprite[] sprites = new Sprite[10];
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
@@ -29,7 +32,9 @@ public class MainWindow extends JFrame {
         initApplication();
         add(canvas);
         setTitle("Circles");
+        onClickAction();
         setVisible(true);
+
     }
 
     private void initApplication() {
@@ -55,26 +60,17 @@ public class MainWindow extends JFrame {
         }
     }
 
-    private static void method1(Animal a) {
-        a.name = "Barsik";
-    }
 
-    private static void sum(int a, int b) {
-
-    }
-
-    private static void typecastExample() {
-        Cat c = new Cat("Barsik");
-        Bird b = new Bird("Chijik");
-
-        Animal[] zoo = {c, b};
-
-        for (int i = 0; i < zoo.length; i++) {
-            zoo[i].walk();
-
-            if (zoo[i] instanceof Bird) {
-                ( (Bird) zoo[i] ).fly();
+    private void onClickAction (){
+        addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseReleased(MouseEvent e) {
+                super.mouseReleased(e);
+                Sprite[] newSprites = new Sprite[sprites.length+1];
+                for (int i = 0;)
+                sprites = newSprites;
             }
-        }
+        });
+
     }
 }
