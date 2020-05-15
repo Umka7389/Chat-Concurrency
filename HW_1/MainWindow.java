@@ -66,8 +66,12 @@ public class MainWindow extends JFrame{
             @Override
             public void mouseReleased(MouseEvent e) {
                 if (e.getModifiers() == MouseEvent.BUTTON1_MASK){
-                super.mouseReleased(e);
-                insertNewBall(sprites);
+                    super.mouseReleased(e);
+                    insertNewBall(sprites);
+                }
+                if (e.getModifiers() == MouseEvent.BUTTON3_MASK){
+                    super.mouseReleased(e);
+                    deleteNewBall(sprites);
                 }
             }
         });
@@ -81,4 +85,12 @@ public class MainWindow extends JFrame{
         newArray[newArray.length-1] = new Ball();
         sprites = newArray;
     }
+    private void deleteNewBall (Sprite[] oldArray) {
+        Sprite[] newArray = new Sprite[oldArray.length-1];
+        for(int i = 0; i < newArray.length; i++) {
+            newArray[i] = oldArray[i];
+        }
+        sprites = newArray;
+    }
+
 }
