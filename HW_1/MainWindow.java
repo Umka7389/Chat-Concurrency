@@ -65,8 +65,10 @@ public class MainWindow extends JFrame{
         addMouseListener(new MouseAdapter() {
             @Override
             public void mouseReleased(MouseEvent e) {
+                if (e.getModifiers() == MouseEvent.BUTTON1_MASK){
                 super.mouseReleased(e);
                 insertNewBall(sprites);
+                }
             }
         });
 
