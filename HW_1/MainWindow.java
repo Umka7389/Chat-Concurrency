@@ -66,11 +66,17 @@ public class MainWindow extends JFrame{
             @Override
             public void mouseReleased(MouseEvent e) {
                 super.mouseReleased(e);
-                Sprite[] newSprites = new Sprite[sprites.length+1];
-                for (int i = 0;)
-                sprites = newSprites;
+                insertNewBall(sprites);
             }
         });
 
+    }
+    private void insertNewBall (Sprite[] oldArray) {
+        Sprite[] newArray = new Sprite[oldArray.length+1];
+        for(int i = 0; i < oldArray.length; i++) {
+            newArray[i] = oldArray[i];
+        }
+        newArray[newArray.length-1] = new Ball();
+        sprites = newArray;
     }
 }
