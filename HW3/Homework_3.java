@@ -9,6 +9,7 @@ public class Homework_3 {
 
 
     public static void main(String[] args) {
+
         String inputText = "Here you can find activities to practise your reading skills Reading will help you to improve your understanding of the language and build your vocabulary";
         String[] array = inputText.toLowerCase().split(" ");
 
@@ -24,5 +25,11 @@ public class Homework_3 {
         }
         System.out.println(map);
         System.out.println(set);
+//----------------------------------------------------------------------//
+
+        PhoneBook phoneBook = new PhoneBook();
+        System.out.println(phoneBook.searchPhone("Иванов"));
+        System.out.println(phoneBook.searchMail("Иванов"));
+
     }
 }
