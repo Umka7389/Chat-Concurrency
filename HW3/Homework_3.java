@@ -38,5 +38,8 @@ public class Homework_3 {
         System.out.println(phoneBook.searchPhone("Иванов"));
         System.out.println(phoneBook.searchMail("Иванов"));
 
+        System.out.println(phoneBook.searchPhone("Иванов"));
+        System.out.println(phoneBook.searchMailHash("Иванов"));
+
     }
 }

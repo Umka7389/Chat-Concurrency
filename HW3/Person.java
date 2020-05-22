@@ -12,6 +12,7 @@ public class Person {
         this.phoneNumber = phoneNumber;
         this.mail = mail;
         phoneBook.add(this);
+        phoneBook.addHash(this);
     }
 
 
