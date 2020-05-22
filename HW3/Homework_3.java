@@ -28,6 +28,13 @@ public class Homework_3 {
 //----------------------------------------------------------------------//
 
         PhoneBook phoneBook = new PhoneBook();
+
+        Person person1 = new Person("Иван","Иванов","+7901546859","ИванИванов@ya.ru", phoneBook);
+        Person person2 = new Person("Виктор","Иванов","+79028546859","ВикторИванов@ya.ru", phoneBook);
+        Person person3 = new Person("Петр","Петров","+7903546859","ПетрПетров@ya.ru", phoneBook);
+        Person person4 = new Person("Николай","Петров","+7904546859","НиколайПетров@ya.ru", phoneBook);
+        Person person5 = new Person("Илья","Костров","+7905546859","ИльяКостров@ya.ru", phoneBook);
+
         System.out.println(phoneBook.searchPhone("Иванов"));
         System.out.println(phoneBook.searchMail("Иванов"));
 
